@@ -1,6 +1,6 @@
 package com.guanhang.dao;
 
-public interface DatabaseOperate {
+public interface  DatabaseOperate {
 
     int insert(Object o);
     int update(Object o);

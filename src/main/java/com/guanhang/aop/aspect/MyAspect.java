@@ -1,4 +1,4 @@
-package com.guanhang.aop;
+package com.guanhang.aop.aspect;
 
 import org.springframework.stereotype.Component;
 

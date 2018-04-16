@@ -1,12 +1,15 @@
-package com.guanhang.service;
+package com.guanhang.springdemo;
 
 import com.guanhang.daoimpl.OperateTableTwoImpl;
 
-public class Myservice5 {
+/**
+ * 采用构造方法注入
+ */
+public class SpringXmlConstructor {
 
     private OperateTableTwoImpl operateTableTwo;
 
-    public Myservice5(OperateTableTwoImpl operateTableTwo) {
+    public SpringXmlConstructor(OperateTableTwoImpl operateTableTwo) {
         this.operateTableTwo = operateTableTwo;
     }
 

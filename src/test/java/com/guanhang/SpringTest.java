@@ -1,29 +1,28 @@
 package com.guanhang;
 
-import com.guanhang.service.*;
+import com.guanhang.springdemo.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:spring/Context*.xml")
+//@ContextConfiguration("classpath:spring/Context*.xml")
 public class SpringTest
 {
 
     @Test
     public void testNoSpring() {
-        Myservice myservice = new Myservice();
+        NoSpring myservice = new NoSpring();
         myservice.insert(null);
     }
 
     @Test
     public void testwithSpringXML() {
         ApplicationContext context = new ClassPathXmlApplicationContext("/spring/Contextforxml.xml");
-        Myservice2 myservice2 =(Myservice2)context.getBean("myservice2");
+        SpringXmlSetter myservice2 =(SpringXmlSetter)context.getBean("myservice2");
         myservice2.insert(null);
 
     }
@@ -47,7 +46,7 @@ public class SpringTest
     @Test
     public void testwithSpringConstructXML() {
         ApplicationContext context = new ClassPathXmlApplicationContext("/spring/Contextforxml.xml","/spring/Contextforanno.xml");
-        Myservice5 myservice5 = (Myservice5)context.getBean("myservice5");
+        SpringXmlConstructor myservice5 = (SpringXmlConstructor)context.getBean("myservice5");
         myservice5.insert(null);
 
     }

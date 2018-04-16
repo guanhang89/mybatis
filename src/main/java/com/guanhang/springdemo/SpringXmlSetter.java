@@ -1,8 +1,8 @@
-package com.guanhang.service;
+package com.guanhang.springdemo;
 
 import com.guanhang.dao.DatabaseOperate;
 //使用xml配置
-public class Myservice2 {
+public class SpringXmlSetter {
 
     private DatabaseOperate operate;
 
@@ -14,7 +14,7 @@ public class Myservice2 {
         return operate;
     }
 
-    //Setter注入
+    //xml中Setter注入
     public void setOperate(DatabaseOperate operate) {
         this.operate = operate;
     }

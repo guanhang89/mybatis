@@ -1,7 +1,6 @@
-package com.guanhang.service;
+package com.guanhang.springdemo;
 
 import com.guanhang.daoimpl.OperateTableTwoImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component

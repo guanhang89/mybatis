@@ -1,4 +1,4 @@
-package com.guanhang.service;
+package com.guanhang.springdemo;
 
 import com.guanhang.dao.DatabaseOperate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,8 @@ public class Myservice3 {
 
     @Autowired
     @Qualifier("operateTableTwoImpl")
-    //@Repository、@Service、@Controller 和 @Component
+    //@Repository、@Service、@Controller 都是@Component的变形
+    //@Resource是java自带的
     private DatabaseOperate operate;
 
     public void insert(Object o) {

@@ -14,7 +14,7 @@
     <!-- 引入切面类 -->
     <aop:aspect ref="myAspect">
       <!-- 定义通知类型：切面类的方法和切入点的表达式 -->
-      <aop:before method="log" pointcut="execution(public * com.guanhang.daoimpl.AOPimpl.insert(..))"/>
+      <aop:before method="log" pointcut="execution(public * com.guanhang.aop.impl.AOPimpl.insert(..))"/>
     </aop:aspect>
   </aop:config>
 

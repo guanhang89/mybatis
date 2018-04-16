@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
-        http://www.springframework.org/schema/context
-        http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
   <!--除了id还有一个name属性，可以指定多个别名
       scope:singleton prototype
   -->
   <bean id="operateTableOne" class="com.guanhang.daoimpl.OperateTableOneImpl" />
+  <bean id="operateTableTwo" class="com.guanhang.daoimpl.OperateTableTwoImpl" />
 
   <!--内部bean
   <property name="target">
@@ -18,22 +16,22 @@
           <property name="name" value="Fiona Apple"/>
   </property>
   -->
-  <bean id="myservice2" class="com.guanhang.service.Myservice2">
+  <bean id="springSetter" class="com.guanhang.springdemo.SpringXmlSetter">
     <property name="operate" ref="operateTableOne"/>
   </bean>
 
   <!--<constructor-arg index="1" value="42"/>
       <constructor-arg type="int" value="7500000"/>
   -->
-  <bean id="myservice5" class="com.guanhang.service.Myservice5">
-    <constructor-arg name="operateTableTwo" ref="operateTableTwoImpl"/>
+  <bean id="springXmlConstructor" class="com.guanhang.springdemo.SpringXmlConstructor">
+    <constructor-arg name="operateTableTwo" ref="operateTableTwo"/>
   </bean>
 
 
   <bean id="operateTableFactory" class="com.guanhang.daoimpl.OperateTableFactory"/>
   <bean id="operateTable1" class="com.guanhang.daoimpl.OperateTableOneImpl" factory-bean="operateTableFactory" factory-method="createInstance"/>
   <bean id="operateTable2" class="com.guanhang.daoimpl.OperateTableFactory2" factory-method="createInstance"/>
-  <bean id="myservice6" class="com.guanhang.service.Myservice6">
+  <bean id="myservice6" class="com.guanhang.springdemo.Myservice6">
     <property name="operateTableOne" ref="operateTable1"/>
     <property name="operateTableOne2" ref="operateTable2"/>
   </bean>

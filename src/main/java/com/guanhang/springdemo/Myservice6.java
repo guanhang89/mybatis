@@ -1,8 +1,6 @@
-package com.guanhang.service;
+package com.guanhang.springdemo;
 
-import com.guanhang.daoimpl.OperateTableFactory;
 import com.guanhang.daoimpl.OperateTableOneImpl;
-import com.guanhang.daoimpl.OperateTableTwoImpl;
 
 public class Myservice6 {
 
